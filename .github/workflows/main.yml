@@ -1,6 +1,7 @@
 #Tresc skopiowana z https://github.com/anothrNick/github-tag-action/blob/master/README.md
 name: Tag version
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
