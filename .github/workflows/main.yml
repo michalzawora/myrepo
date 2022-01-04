@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs: 
-      output1: ${{ steps.gen_tag.outputs.new_tag }}
+      release_tag: ${{ steps.gen_tag.outputs.new_tag }}
     steps:
     - name: Step1 - Checkout
       uses: actions/checkout@master
