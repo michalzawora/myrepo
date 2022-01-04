@@ -1,4 +1,4 @@
-#Tresc skopiowana z https://github.com/anothrNick/github-tag-action/blob/master/README.md
+#My first action using github-actions
 name: Tag version
 on:
   workflow_dispatch:  #Manual start
