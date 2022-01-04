@@ -8,18 +8,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs: 
+      output1: ${{ steps.gen_tag.outputs.new_tag }}
     steps:
-    - name: Test
+    - name: Step1 - Checkout
       uses: actions/checkout@master
       with:
         fetch-depth: '0'
-    - name: Bump version and push tag
+    - name: Step2 - Bump version and push tag
       id: gen_tag
       uses: anothrNick/github-tag-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         WITH_V: true
-outputs:
-  tag_outut:
-    description: "Random number"
-    value: ${{ steps.gen_tag.outputs.new_tag }}
